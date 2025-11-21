@@ -1,5 +1,4 @@
-🚧
-# Real-Time Lane Line Detection
+# Real-Time Lane Line Detection🚧
 A computer vision project implementing a standard pipeline to detect and draw lane lines on static images and in real-time video streams using OpenCV and Numpy.
 This project is a classic demonstration of combining image processing and geometric algorithms for self-driving applications.
 
