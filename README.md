@@ -2,7 +2,7 @@
 A computer vision project implementing a standard pipeline to detect and draw lane lines on static images and in real-time video streams using OpenCV and Numpy.
 This project is a classic demonstration of combining image processing and geometric algorithms for self-driving applications.
 
-#🌟 Features
+# Features🌟
 
 Robust Processing Pipeline:Implements a full lane line detection pipeline:
 Grayscale & Blur: Converts the image to grayscale and applies Gaussian blur to reduce noise. 
@@ -14,7 +14,7 @@ Real-Time Video Analysis: Processes video files frame-by-frame, applying the det
 Interactive Testing: Includes a segment using OpenCV Trackbars for interactively adjusting Canny edge detection thresholds (x, y, x2, y2) to visualize the impact on edge quality.
 Output Visualization: Overlays the detected lane lines (colored Orange/Red) onto the original image/video frame using cv2.addWeighted() for a clear visual result.
 
-#🛠️ Technologies Used
+# Technologies Used🛠️
 
 Technology  Purpose
 Python      Core programming language.
@@ -22,20 +22,20 @@ OpenCV  (cv2)Image processing, edge detection, Hough Transform, video reading, a
 NumPy  Array manipulation, defining the ROI polygon, and calculating line averages.
 math   Essential for slope and intercept calculations in the lane formulation function.
 
-#📦 Prerequisites and Setup
+# Prerequisites and Setup📦
 
 Before running the project, ensure you have the necessary libraries installed:
 pip install opencv-python numpy matplotlib
 
 
-#📂 File Structure Note (Crucial for Portability)
+# File Structure Note (Crucial for Portability)📂
 
 Your code currently uses absolute file paths (e.g., "C://Users//HP//Downloads//solidWhiteCurve (1).jpg").
 For this project to work on GitHub, you must:Create a data folder in your project root.
 Place all necessary images and video files (e.g., solidWhiteCurve.jpg, solidYellowCurve2.jpg, solidWhiteRight.mp4) inside this data folder.
 Update the paths in your Python code to use relative paths like "data/solidWhiteCurve.jpg" or "data/solidWhiteRight.mp4".
 
-#▶️ How to Run
+# How to Run▶️
 
 The project is structured within a Jupyter Notebook, which allows for step-by-step execution.
 
@@ -56,7 +56,7 @@ The project is structured within a Jupyter Notebook, which allows for step-by-st
   3. The output window will display the video with the lane lines detected and drawn in every frame.
   4. Press 'q' to stop the video playback.
     
-#🧠 Pipeline Breakdown (Helper Functions)
+# Pipeline Breakdown (Helper Functions)🧠
 
 The logic for extracting robust lane lines is contained in the helper functions:
 helpers_edges(gray)  Canny Edge   DetectionApplies Gaussian Blur, then uses Canny with fixed thresholds (50, 150) to find edges.
@@ -64,7 +64,7 @@ helpers_masked_edges(edges)  Region of Interest (ROI)  Creates a trapezoidal mas
 helpers_hough_lines(img)  Probabilistic Hough Transform  Detects preliminary line segments in the masked image using parameters like RHO, THETA, and MIN_VOTES.
 helpers_formulate_lanes(lines, img)  Averaging and Extrapolation  Filters line segments based on slope (positive for right, negative for left), calculates the mean slope and intercept for each lane, and extrapolates these two averaged lines back onto the ROI, resulting in clean, singular lane markers.helpers_draw_lines(lines, masked_edges)VisualizationDraws the final averaged lines onto a blank canvas that is then overlaid onto the original frame.
 
-#🤝 Contributing
+# Contributing🤝
 
 This project is a great starting point for advanced computer vision techniques.
 Contributions are encouraged!
@@ -74,6 +74,6 @@ Using more advanced techniques like HLS color space filtering for better detecti
 Integrating a method to output the steering angle.
 Please feel free to fork the repository, make improvements, and submit a Pull Request.
 
-#📄 License
+# License📄
 
 Distributed under the MIT License. See LICENSE for more information.
